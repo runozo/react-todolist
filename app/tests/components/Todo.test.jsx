@@ -12,8 +12,9 @@ describe('Todo', () => {
     });
 
     it('should call onToggle prop with id on click', () => {
+        const testID = 199;
         var todoData = {
-            id: 199,
+            id: testID,
             text: 'Write todo.test.jsx test',
             completed: true
         };
@@ -22,6 +23,6 @@ describe('Todo', () => {
         var $el = $(ReactDOM.findDOMNode(todo));
         TestUtils.Simulate.click($el[0]);
 
-        expect(spy).toHaveBeenCalledWith(199);
+        expect(spy).toHaveBeenCalledWith(testID);
     });
 });
