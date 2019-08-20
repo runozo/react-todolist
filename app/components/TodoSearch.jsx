@@ -20,7 +20,7 @@ var TodoSearch = React.createClass({
                     </label>
                 </div>
                 <form onSubmit={this.handleSubmit}>
-                    <button className="button expanded">Serach</button>
+                    <button className="button expanded">Search</button>
                 </form>
             </div>
         );
