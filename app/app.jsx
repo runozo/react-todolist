@@ -12,10 +12,10 @@ store.subscribe(() => {
   console.log('New state', store.getState());
 });
 
-store.dispatch(actions.addTodo('Walk the cat'));
-store.dispatch(actions.addTodo('Sleep'));
-store.dispatch(actions.setSearchText('cat'));
-store.dispatch(actions.toggleShowCompleted());
+// store.dispatch(actions.addTodo('Walk the cat'));
+// store.dispatch(actions.addTodo('Sleep'));
+// store.dispatch(actions.setSearchText('cat'));
+// store.dispatch(actions.toggleShowCompleted());
 
 // Load foundation
 $(document).foundation();
