@@ -20,6 +20,21 @@ export var startAddTodo = text => ((dispatch, getState) => {
     })
 });
 export var addTodos = todos => ({type: 'ADD_TODOS', todos});
+export var startAddTodos = () => ((dispatch, getState) => {
+    var todosRef = firebaseRef.child('todos');
+
+    return todosRef.once('value').then((snapshot) => {
+        var todos = snapshot.val() || {};
+        var parsedTodos = [];
+        Object.keys(todos).forEach((todoId) => {
+            parsedTodos.push({
+                id: todoId,
+                ...todos[todoId]
+            });
+        });
+        dispatch(addTodos(parsedTodos));
+    });
+});
 export var toggleShowCompleted = () => ({type: 'TOGGLE_SHOW_COMPLETED'});
 
 export var updateTodo = (id, updates) => ({type: 'UPDATE_TODO', id, updates});
@@ -31,7 +46,7 @@ export var startToggleTodo = (id, completed) => ((dispatch, getState) => {
     };
 
     return todoRef.update(updates).then(() => {
-       dispatch(updateTodo(id, updates)) ;
+       dispatch(updateTodo(id, updates));
     });
 
 });
