@@ -31,8 +31,6 @@ module.exports = {
             return searchText.length === 0 || ~text.indexOf(searchText);
         });
 
-
-
         // Sort todos with non-completed first
         filteredTodos.sort((a, b) => {
             if (!a.completed && b.completed) {
