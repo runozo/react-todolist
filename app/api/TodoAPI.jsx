@@ -2,7 +2,6 @@ var $ = require('jquery');
 
 module.exports = {
     filterTodos: function(todos, showCompleted, searchText) {
-        console.log('ciao!');
         var filteredTodos = todos;
         // Filter by showCompleted
         filteredTodos = filteredTodos.filter((todo) => {

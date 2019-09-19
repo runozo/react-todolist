@@ -1,7 +1,17 @@
 var webpack = require('webpack');
 var path = require('path');
+var envFile = require('node-env-file');
+const process = require('process');
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+
+try {
+  envFile('./config/' + process.env.NODE_ENV + '.env', {verbose: true, overwrite: true, raise: false, logger: console});
+} catch (e) {
+
+}
+// envFile(path.join(__dirname, '/config/development.env'));
+
 
 module.exports = {
   entry: [
@@ -21,7 +31,8 @@ module.exports = {
       compressor: {
         warnings: false
       }
-    })
+    }),
+    new webpack.EnvironmentPlugin(['NODE_ENV', 'API_KEY', 'AUTH_DOMAIN', 'DATABASE_URL', 'STORAGE_BUCKET'])
   ],
   output: {
     path: __dirname,
