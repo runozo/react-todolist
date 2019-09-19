@@ -6,7 +6,7 @@ const process = require('process');
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 try {
-  envFile('./config/' + process.env.NODE_ENV + '.env', {verbose: true, overwrite: true, raise: false, logger: console});
+  envFile('./config/' + process.env.NODE_ENV.trim() + '.env', {verbose: true, overwrite: true, raise: false, logger: console});
 } catch (e) {
 
 }
