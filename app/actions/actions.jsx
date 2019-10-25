@@ -51,6 +51,7 @@ export var startToggleTodo = (id, completed) => ((dispatch, getState) => {
 
 });
 
+export const login = (uid) => ({type: 'LOGIN', uid});
 export const startLogin = () => ((dispatch, getState) => {
     return firebase.auth().signInWithPopup(githubProvider).then(
         (result) => {console.log('Auth worked!', result);},
@@ -58,6 +59,7 @@ export const startLogin = () => ((dispatch, getState) => {
     );
 });
 
+export const logout = () => ({type: 'LOGOUT'});
 export const startLogout = () => ((dispatch, getState) => {
     return firebase.auth().signOut().then(
         () => {console.log('Logged out!');}
