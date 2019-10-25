@@ -7,24 +7,7 @@ var TodoApp = require('TodoApp');
 var actions = require('actions');
 var store = require('configureStore').configure();
 var TodoAPI = require('TodoAPI');
-
-// import './../playground/firebase/index';
-
-// store.subscribe(() => {
-//   var state = store.getState();
-//   console.log('New state', state);
-//   TodoAPI.setTodos(state.todos);
-// });
-
-// var initialTodos = TodoAPI.getTodos();
-// store.dispatch(actions.addTodos(initialTodos));
-
-
-
-// store.dispatch(actions.addTodo('Walk the cat'));
-// store.dispatch(actions.addTodo('Sleep'));
-// store.dispatch(actions.setSearchText('cat'));
-// store.dispatch(actions.toggleShowCompleted());
+import Login from 'Login';
 
 store.dispatch(actions.startAddTodos());
 
@@ -36,7 +19,12 @@ require('style!css!sass!applicationStyles')
 
 ReactDOM.render(
   <Provider store={store}>
-    <TodoApp/>
+    <Router history={hashHistory}>
+      <Route path="/">
+        <Route path="todos" component={TodoApp}/>
+        <IndexRoute component={Login}/>
+      </Route>
+    </Router>
   </Provider>,
   document.getElementById('app')
 );

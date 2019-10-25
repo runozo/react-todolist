@@ -1,7 +1,6 @@
 var webpack = require('webpack');
 var path = require('path');
 var envFile = require('node-env-file');
-const process = require('process');
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
