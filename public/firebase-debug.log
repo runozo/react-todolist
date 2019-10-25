@@ -1,0 +1,85 @@
+[debug] [2019-10-25T09:44:01.734Z] ----------------------------------------------------------------------
+[debug] [2019-10-25T09:44:01.736Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\cghirelli.ARPA-SC\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2019-10-25T09:44:01.737Z] CLI Version:   7.6.1
+[debug] [2019-10-25T09:44:01.737Z] Platform:      win32
+[debug] [2019-10-25T09:44:01.737Z] Node Version:  v10.15.3
+[debug] [2019-10-25T09:44:01.752Z] Time:          Fri Oct 25 2019 11:44:01 GMT+0200 (GMT+02:00)
+[debug] [2019-10-25T09:44:01.752Z] ----------------------------------------------------------------------
+[debug] [2019-10-25T09:44:01.752Z] 
+[debug] [2019-10-25T09:44:01.770Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-10-25T09:44:01.772Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\cghirelli.ARPA-SC\Documents\WORK\web\react-todolist\public
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2019-10-25T09:45:01.961Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-10-25T09:45:01.961Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-10-25T09:45:02.072Z] <<< HTTP RESPONSE 400
+[debug] [2019-10-25T09:45:02.073Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects?pageSize=100  
+ 
+[debug] [2019-10-25T09:45:02.201Z] <<< HTTP RESPONSE 401
+[debug] [2019-10-25T09:45:02.201Z] <<< HTTP RESPONSE BODY
+[debug] [2019-10-25T09:45:02.248Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2019-10-25T09:45:02.258Z] FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at module.exports (C:\Users\cghirelli.ARPA-SC\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:38:12)
+    at Request._callback (C:\Users\cghirelli.ARPA-SC\AppData\Roaming\npm\node_modules\firebase-tools\lib\api.js:39:35)
+    at Request.self.callback (C:\Users\cghirelli.ARPA-SC\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:189:13)
+    at Request.EventEmitter.emit (domain.js:441:20)
+    at Request.<anonymous> (C:\Users\cghirelli.ARPA-SC\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1161:10)
+    at Request.emit (events.js:189:13)
+    at Request.EventEmitter.emit (domain.js:441:20)
+    at IncomingMessage.<anonymous> (C:\Users\cghirelli.ARPA-SC\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1083:12)
+    at Object.onceWrapper (events.js:277:13)
+[error] 
+[error] Error: Failed to list Firebase projects. See firebase-debug.log for more info.
+[debug] [2019-10-25T09:45:13.057Z] ----------------------------------------------------------------------
+[debug] [2019-10-25T09:45:13.059Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\cghirelli.ARPA-SC\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2019-10-25T09:45:13.059Z] CLI Version:   7.6.1
+[debug] [2019-10-25T09:45:13.059Z] Platform:      win32
+[debug] [2019-10-25T09:45:13.060Z] Node Version:  v10.15.3
+[debug] [2019-10-25T09:45:13.073Z] Time:          Fri Oct 25 2019 11:45:13 GMT+0200 (GMT+02:00)
+[debug] [2019-10-25T09:45:13.073Z] ----------------------------------------------------------------------
+[debug] [2019-10-25T09:45:13.073Z] 
+[debug] [2019-10-25T09:45:13.086Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-10-25T09:45:13.088Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\cghirelli.ARPA-SC\Documents\WORK\web\react-todolist\public
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
